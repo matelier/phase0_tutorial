@@ -1,7 +1,0 @@
-c ====<< & or & >>===
-c & : VPP, VP
-c $ : DEC, HP, SUN
- &fnames
- F_POT(1) = '../../../pp/Si_ggapbe_paw_nc_01m.pp'
- F_ZAJ    = '/dev/null'
- /
