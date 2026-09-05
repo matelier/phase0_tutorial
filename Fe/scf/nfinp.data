@@ -1,0 +1,37 @@
+control {
+	condition = initial
+}
+
+accuracy {
+	cutoff_wf = 25 rydberg
+	cutoff_cd = 225 rydberg
+	num_bands = 20
+	ksampling {
+		mesh { nx = 10, ny = 10, nz = 10 }
+	}
+	initial_charge_density = atomic_charge_density
+}
+
+structure {
+	unit_cell {
+	#units angstrom
+		a = 2.845, b = 2.845, c = 2.845
+		alpha = 90, beta = 90, gamma = 90
+	}
+	symmetry {
+		method = automatic
+		tspace { lattice_system = bodycentered }
+		sw_inversion = on
+	}
+	magnetic_state = ferro
+	atom_list {
+		atoms {
+		#tag  rx       ry         rz      element
+			 0.000   0.000   0.000  Fe
+		}
+	}
+	element_list {
+	#tag element  atomicnumber  zeta
+		Fe   26   0.275
+	}
+}

@@ -1,0 +1,46 @@
+control {
+	condition = fixed_charge
+}
+
+accuracy {
+	cutoff_wf = 25 rydberg
+	cutoff_cd = 225 rydberg
+	num_bands = 10
+	ksampling {
+		method = mesh
+		mesh { nx = 10, ny = 10, nz = 10 }
+	}
+	smearing { method = tetrahedral }
+	ek_convergence {
+		num_extra_bands = 10
+	}
+}
+
+structure {
+	unit_cell_type = Bravais
+	unit_cell {
+	#units angstrom
+		a = 2.845, b = 2.845, c = 2.845
+		alpha = 90, beta = 90, gamma = 90
+	}
+	symmetry {
+		method = automatic
+		tspace { lattice_system = bodycentered }
+		sw_inversion = on
+	}
+	atom_list {
+		atoms {
+		#tag  rx       ry         rz      element
+			 0.000   0.000   0.000  Fe
+		}
+	}
+	magnetic_state = ferro
+	element_list {
+	#tag element atomicnumber zeta
+		Fe   26   0.3
+	}
+}
+
+postprocessing {
+	dos { sw_dos = on }
+}
