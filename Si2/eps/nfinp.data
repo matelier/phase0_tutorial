@@ -1,7 +1,5 @@
 control {
 	condition = fixed_charge
-	cpumax = 1 day ! { sec|min|hour|day }
-	max_iteration = 6000
 	use_additional_projector = off
 }
 
@@ -17,11 +15,9 @@ accuracy {
 }
 
 structure {
-	unit_cell_type = primitive
+	unit_cell_type = Bravais
 	unit_cell {
-		a_vector = 0.0000000000 5.1300000000 5.1300000000
-		b_vector = 5.1300000000 0.0000000000 5.1300000000
-		c_vector = 5.1300000000 5.1300000000 0.0000000000
+		a = 10.26
 	}
 	symmetry {
 		method = automatic
@@ -30,13 +26,14 @@ structure {
 	}
 	atom_list {
 		atoms {
-		#tag  rx       ry         rz     element
-			 0.125   0.125   0.125  Si
-			-0.125  -0.125  -0.125  Si
+		#tag  element rx ry rz
+			Si   0.125   0.125   0.125
+			Si  -0.125  -0.125  -0.125
 		}
 	}
-	element_list { #tag element atomicnumber
-		Si 14
+	element_list {
+	#tag  element atomicnumber
+		Si   14
 	}
 }
 
