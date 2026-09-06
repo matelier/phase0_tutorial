@@ -1,4 +1,5 @@
 &fnames
 F_POT(1) = '../../pp/Fe_ggapbe_paw_us_02.pp'
 F_CHGT   = '../scf/nfchgt.data'
+F_CNTN_BIN_PAW = '../scf/continue_bin_paw.data'
 /
