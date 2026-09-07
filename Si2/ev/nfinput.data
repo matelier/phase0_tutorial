@@ -13,6 +13,7 @@ accuracy {
 
 structure {
 	unit_cell {
+	#units angstrom
 		a = $1
 	}
 	symmetry {
