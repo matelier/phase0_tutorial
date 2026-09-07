@@ -14,7 +14,7 @@ accuracy {
 structure {
 	unit_cell_type = Bravais
 	unit_cell {
-		a = 10.26
+		a = 5.47 angstrom
 	}
 	symmetry {
 		method = automatic

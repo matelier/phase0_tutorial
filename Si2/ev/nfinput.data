@@ -13,8 +13,7 @@ accuracy {
 
 structure {
 	unit_cell {
-	#units angstrom
-		a = $1
+		a = $1 angstrom
 	}
 	symmetry {
 		method = automatic
