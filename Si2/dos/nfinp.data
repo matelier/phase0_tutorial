@@ -8,7 +8,7 @@ accuracy {
 	num_bands = 8
 	ksampling {
 		method = mesh
-		mesh { nx = 4, ny = 4, nz = 4 }
+		mesh { nx = 8, ny = 8, nz = 8 }
 	}
 	smearing { method = tetrahedral }
 }
