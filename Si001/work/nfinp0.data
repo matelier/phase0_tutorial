@@ -1,0 +1,67 @@
+control {
+	condition = initial
+}
+
+accuracy {
+	cutoff_wf = 20.0 rydberg
+	cutoff_cd = 80.0 rydberg
+	num_bands = 2
+	ksampling {
+		mesh { nx = 4, ny = 2, nz = 1 }
+	}
+}
+
+structure {
+	unit_cell_type = Bravais
+	unit_cell {
+	!	a = 5.47 angstrom
+		a = 3.867874093090414958472618660713524 angstrom ! 5.47 / sqrt(2)
+		b = 7.735748186180829916945237321427048 angstrom ! 5.47 * sqrt(2)
+		c = 16.41 angstrom
+	}
+	symmetry {
+		method = automatic
+		sw_inversion = on
+	}
+	atom_list {
+		atoms {
+		#tag  element rx ry rz
+			Si   0.0   0.375   0.4583333333333
+			Si   0.0   0.875   0.4583333333333
+			Si   0.5   0.375   0.3750000000000
+			Si   0.5   0.875   0.3750000000000
+			Si   0.5   0.125   0.2916666666667
+			Si   0.5   0.625   0.2916666666667
+			Si   0.0   0.125   0.2083333333333
+			Si   0.0   0.625   0.2083333333333
+			Si   0.0   0.375   0.1250000000000
+			Si   0.0   0.875   0.1250000000000
+			Si   0.5   0.375   0.0416666666667
+			Si   0.5   0.875   0.0416666666667
+			Si   0.5   0.125  -0.0416666666667
+			Si   0.5   0.625  -0.0416666666667
+			Si   0.0   0.125  -0.1250000000000
+			Si   0.0   0.625  -0.1250000000000
+			Si   0.0   0.375  -0.2083333333333
+			Si   0.0   0.875  -0.2083333333333
+			Si   0.5   0.375  -0.2916666666667
+			Si   0.5   0.875  -0.2916666666667
+			Si   0.5   0.125  -0.3750000000000
+			Si   0.5   0.625  -0.3750000000000
+			Si   0.0   0.125  -0.4583333333333
+			Si   0.0   0.625  -0.4583333333333
+
+		}
+	}
+	element_list {
+	#tag  element atomicnumber
+		Si   14
+	}
+}
+
+postprocessing {
+	charge {
+		sw_charge_rspace = on
+		filetype = cube
+	}
+}
