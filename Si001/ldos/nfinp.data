@@ -1,5 +1,5 @@
 control {
-	condition = fixed_charge
+	condition = initial
 }
 
 accuracy {
@@ -10,9 +10,7 @@ accuracy {
 		mesh { nx = 8, ny = 4, nz = 1 }
 	}
 	smearing { method = tetrahedral }
-	ek_convergence {
-		delta_eigenvalue = 1.0e-6
-	}
+	! initial_charge_density = file
 }
 
 structure {
