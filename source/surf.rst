@@ -286,21 +286,6 @@ dos.plスクリプトを用いることによって各原子に割り当てら�
   局所状態密度
 
 workfuncプログラムを使用することによって仕事関数を得ることができます。
-まずはworkfuncプログラムをコンパイルしましょう。
-
-.. parsed-literal::
-   $ pushd ~/|PHASE020XX.yy|/src_workfunc
-   $ make F90='gfortran -fallow-argument-mismatch' install
-   gfortran -fallow-argument-mismatch -c -O m_Const_Parameters.f90
-   gfortran -fallow-argument-mismatch -c -O  m_ArraySize_Parameters.F90
-   ...
-   ...
-   mv workfunc ../bin/
-   $ popd
-
-作業中のディレクトリーにすぐに戻ってこられるよう ``pushd`` ``popd`` コマンドを使ってみました。
-この例ではworkfuncプログラムをコンパイルする際に ``make F90='gfortran -fallow-argument-mismatch' install`` としてGNU Fortranコンパイラーを利用し、さらに ``install`` ターゲットを指定することによってbinディレクトリーに実行バイナリーを移動するようにしています。
-gfortranはデフォルトのコンパイラーですが、そのバージョン10以上を用いる場合はオプションに ``-fallow-argument-mismatch`` を加える必要があるので、変数 ``F90`` を用いてそのことを ``make`` に伝えています（用いているコンパイラーがgfortranのバージョン9以下の場合は不要）
 
 workfuncプログラムを実行すると得られるnfvlcr_av.dataファイルから真空域のポテンシャルを見出します。
 その値とフェルミエネルギーの差が仕事関数に対応します。
