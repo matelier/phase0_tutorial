@@ -1,5 +1,8 @@
 .DS_Store
+.python-version
 .vscode
+uv.lock
+pyproject.toml
 build/
 *.emf
 *.wmf

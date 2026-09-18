@@ -14,4 +14,14 @@ pip install sphinx
 pip install sphinx_rtd_theme
 ```
 
+`uv`仮想環境向け
+
+```sh
+uv init --python 3.13
+uv venv
+source .venv/bin/activate
+uv add sphinx
+uv add sphinx_rtd_theme
+```
+
 例題PHASE/0入力ファイルは`main`ブランチに分離しました。
