@@ -43,7 +43,7 @@ PHASE/0の計算では（必ず）周期境界条件が課されるため、厳�
 本チュートリアルを実行するにはPHASE/0と可視化用のソフトウェアがお使いのパソコンにインストールされている必要があります。
 インストールされていなければ、\ `このサイトの情報 <https://github.com/Materials-Science-Software-Consortium/phase0_install/tree/main/WSL>`_ などを参考にインストールしてください。
 WSL環境（UbuntuなどのLinuxディストリビューション）が整いましたら、PHASE/0と、可視化用ソフトウェアgnuplot, evinceをインストールしてください。
-本稿では以降ホームディレクトリーに |PHASE020XX.YY| がインストールされていることを前提に説明します。
+本稿では以降ホームディレクトリに |PHASE020XX.YY| がインストールされていることを前提に説明します。
 
 また、原子配置の可視化に `VESTA <https://jp-minerals.org/vesta/jp/>`_ を用います。
 併せてインストールしてください。
